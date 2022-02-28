@@ -378,6 +378,7 @@ class _MathFieldState extends State<MathField> with TickerProviderStateMixin {
       if (config is! BasicKeyboardButtonConfig) continue;
       if (config.keyboardCharacters.isEmpty) continue;
 
+      continue; //禁止使用快捷键
       if (config.keyboardCharacters
           .any((element) => element.toLowerCase() == lowerCaseCharacter)) {
         final basicConfig = config;
